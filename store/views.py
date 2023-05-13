@@ -1,8 +1,12 @@
 from django.shortcuts import render
-
+from item.models import Category, Item
 def main(request):
-    context = {}
-    return render(request, 'store/main.html', context)
+
+    items = Item.objects.filter(is_sold=False)
+    categories = Category.objects.all()
+    return render(request, 'store/main.html', {
+        'categories': categories,
+        'items': items})
 
 def store(request):
     context = {}
