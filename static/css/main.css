@@ -20,6 +20,11 @@ body {
   box-sizing: border-box;
 }
 
+.spc {
+    padding-top: 20cm;
+    background-color: rgb(220, 110, 110);
+}
+
 a:focus,
 input:focus,
 textarea:focus,

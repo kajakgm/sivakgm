@@ -11,7 +11,9 @@ def main(request):
 def store(request):
     context = {}
     return render(request, 'store/store.html', context)
-
+def base(request):
+    context = {}
+    return render(request, 'store/base.html', context)
 
 def cart(request):
     context = {}
