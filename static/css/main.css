@@ -19,11 +19,12 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
-.spc {
-    padding-top: 20cm;
-    background-color: rgb(220, 110, 110);
+.service-image {
+    max-width: 200px;  /* Adjust the maximum width as per your preference */
+    max-height: 7cm; /* Adjust the maximum height as per your preference */
 }
+
+
 
 a:focus,
 input:focus,
@@ -1175,6 +1176,7 @@ p {
   border-radius: 5px;
   position: relative;
   transition: all 0.3s ease-out 0s;
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {

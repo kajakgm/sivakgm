@@ -1,4 +1,9 @@
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib import admin
+from django.urls import include, path
+from . import views
 
 import store.urls
 from . import views
@@ -11,5 +16,7 @@ urlpatterns = [
     path('store/', views.store, name="store"),
     path('second_shop/', views.second_shop, name="second_shop"),
     path('checkout/', views.checkout, name="checkout"),
-    path('base/', views.base, name="base")
-]
+
+    path('base/', views.base, name="base"),
+    path('admin/', admin.site.urls),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

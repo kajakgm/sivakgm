@@ -10,7 +10,10 @@ def main(request):
 
 def store(request):
     context = {}
-    return render(request, 'store/store.html', context)
+    items = Item.objects.filter(is_sold=False)
+    categories = Category.objects.all()
+    return render(request, 'store/store.html', {'categories': categories,
+                                                'items': items})
 def base(request):
     context = {}
     return render(request, 'store/base.html', context)
