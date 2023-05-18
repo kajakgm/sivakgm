@@ -12,19 +12,23 @@ Shop
 {% block content %}
     <section class="service-section pt-150">
     <div class="container">
-        <h2 class="section-title text-center mb-60">Animaux Disponibles</h2>
-        <div class="row">
+        <div class="hero-content">
+        <h1 class="section-title text-center mb-60 wow fadeInUp">Animaux Disponibles</h1>
+        </div>
+            <div class="row">
+
+
             {% for item in items %}
             <div class="col-xl-4 col-md-6 col-sm-12">
                 <div class="single-service">
                     <div class="content">
                         <a>
-                            <div>
-                                <h2>{{ item.name }}</h2>
-                                <p>{{ item.description }}</p>
-                                <img src="{{ item.image.url }}" width="200"  height="auto">
-                                <p>Price: {{ item.price }}</p>
-                                <button class="main-btn btn-hover" type="submit">Ajouter au Panier</button>
+                            <div class = "container">
+                                <img src="{{ item.image.url }}" width="250"  height="auto">
+                                <a href="{% url 'item:detail' item.id %}"><h2>{{ item.name }}</h2></a>
+
+                                <p>Prix: {{ item.price }}</p>
+                                <button onclick="window.location.href = '#';" class="main-btn btn-hover wow fadeInUp" data-wow-delay=".6s">Adopter</button>
                             </div>
                         </a>
                     </div>

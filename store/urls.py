@@ -16,7 +16,7 @@ urlpatterns = [
     path('store/', views.store, name="store"),
     path('second_shop/', views.second_shop, name="second_shop"),
     path('checkout/', views.checkout, name="checkout"),
-
+    path('items/',include('item.urls')),
     path('base/', views.base, name="base"),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
