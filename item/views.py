@@ -1,10 +1,16 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Item
+from .models import Item, Category
+from .forms import ProductFilterForm
+from django.views.generic import ListView
 
 def item_list(request):
-    items = Item.objects.all()  # Retrieve all items from the database
-    context = {'items': items}
+    items = Item.objects.all()
+    category = ProductFilterForm
+    context = {'items': items,
+                'Category': category}
     return render(request, 'store.html', context)
+
+
 
 
 
