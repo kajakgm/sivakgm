@@ -18,7 +18,7 @@ from django.urls import path, include
 from item.views import item_list
 from item.views import product_list
 urlpatterns = [
-    path('admin/', admin.site.urls),
+
     path('', include('store.urls')),
     path('items/', item_list, name='item_list'),
     path('products/', product_list, name='product_list'),
