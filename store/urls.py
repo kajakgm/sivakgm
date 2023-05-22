@@ -8,6 +8,7 @@ from . import views
 app_name = 'adoption'
 
 
+
 urlpatterns = [
 
     path('', views.main, name="main"),
