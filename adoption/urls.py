@@ -24,4 +24,4 @@ urlpatterns = [
     path('products/', product_list, name='product_list'),
 
 ]
-#thami
+#thami........
