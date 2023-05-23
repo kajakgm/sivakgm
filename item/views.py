@@ -3,6 +3,14 @@ from .models import Item, Category
 from .forms import ProductFilterForm
 from django.views.generic import ListView
 
+
+def items(request):
+    items = Item.objects.filter(is_sold=False)
+
+    return render(request, 'item/items.html', {
+        'items':  items,
+    })
+
 def item_list(request):
     items = Item.objects.all()
     category = ProductFilterForm
@@ -24,3 +32,4 @@ def detail(request, pk):
         'item': item,
 
     })
+

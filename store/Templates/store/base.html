@@ -62,12 +62,17 @@
                     </li>
 					  <li class="nav-item">
 					  </li>
+            
+                 {% if request.user.is_authenticated %}
+                  
+                {% else %}
                     <li class="nav-item">
-                      <a class="page-scroll" href="../#pricing">Log In</a>
+                      <a class="page-scroll" href="{% url 'store:login' %}">Log In</a>
                     </li>
                     <li class="nav-item">
-                      <a class="page-scroll" href="../#contact">Sign In</a>
+                      <a class="page-scroll" href="{% url 'store:signup' %}">Sign Up</a>
                     </li>
+                  {% endif %}
                   </ul>
                 </div>
                 <!-- navbar collapse -->
