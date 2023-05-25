@@ -5,12 +5,17 @@
 <section class="service-section pt-150">
     <div class="container">
         <div class="hero-content">
-
-        <h1 class="section-title text-center mb-60 wow fadeInUp">Animaux Disponibles</h1>
+        <h1 class="section-title text-center mb-60 wow fadeInUp">Animaux Recherchés</h1>
         </div>
             <div class="row">
-
-
+                <div class="col-xxl-6 col-lg-5">
+                    <div class="cta-form-wrapper">
+                        <form method="get" action="{% url 'item:items' %}">
+                            <input  name="query" type="text" value="{{ query }}" placeholder="Trouver votre animal..">
+                            <button type="submit" class="main-btn btn-hover">Search</button>
+                        </form>
+                    </div>
+                </div>
             {% for item in items %}
             <div class="col-xl-4 col-md-6 col-sm-12">
                 <div class="single-service">
