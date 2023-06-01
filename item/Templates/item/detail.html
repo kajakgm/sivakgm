@@ -11,14 +11,14 @@
 				<div class="row align-items-center">
 					<div class="col-lg-6">
 						<div class="about-img wow fadeInUp" data-wow-delay=".5s">
-							<img src="{{ item.image.url }}" alt="{{ item.name }}">
+							<img src="{{ item.image.url }}" alt="{{ item.name }}"  >
 						</div>
 					</div>
 					<div class="col-lg-6">
 						<div class="about-content">
 							<h1 class="mb-30 wow fadeInUp" data-wow-delay=".2s">{{ item.name }}</h1>
 							<p class="mb-40 wow fadeInUp" data-wow-delay=".4s">{{ item.description }}</p>
-							<a href="javascript:void(0)" class="main-btn btn-hover wow fadeInUp" data-wow-delay=".6s">Adopter!</a>
+							<button data-item={{item.id}} data-action="add" class="main-btn btn-hover wow fadeInUp update-cart" data-wow-delay=".6s">Ajouter au Panier !</button>
 						</div>
 					</div>
 				</div>

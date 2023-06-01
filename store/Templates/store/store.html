@@ -33,33 +33,22 @@ Shop
                                 <img src="{{ item.image.url }}" width="250"  height="auto">
                                 <a href="{% url 'item:detail' item.id %}"><h2>{{ item.name }}</h2></a>
 
-                                <p>Prix: {{ item.price }}</p>
-                                <button data-item={{item.id}} data-action="add" class="main-btn btn-hover wow fadeInUp update-cart" data-wow-delay=".6s">Adopter</button>
-                               
+                                <p>Prix: {{ item.price }} $</p>
+                                {% if request.user.is_authenticated %}
+                                    <button data-item={{item.id}} data-action="add" class="main-btn btn-hover wow fadeInUp update-cart" data-wow-delay=".6s">Adopter</button>
+                                {% else %}
+                                    <a href="../login" class="main-btn btn-hover wow fadeInUp update-cart" data-wow-delay=".6s">Adopter</a>
+                                {% endif %}
                             </div>
                         </a>
                     </div>
                 </div>
             </div>
             {% endfor %}
-            <script type="text/javascript">var updateBtns = document.getElementsByClassName('update-cart')
-
-                for (i = 0; i < updateBtns.length; i++){
-                    updateBtns[i].addEventListener('click', function(){
-                        
-                        var productId = this.dataset.item
-                        var action = this.dataset.action
-                        console.log('productId:', productId, 'Action:', action);
-                        console.log('USER:', user);
-                        console.log('hello');
-                        if (user == 'AnonymousUser'){
-                            console.log('User is not authenticated');
-                        }else{
-                            updateUserOrder(productId, action)
-                  }
-                })}</script>
+            
         </div>
     </div>
 </section>
 
 {% endblock content %}
+                

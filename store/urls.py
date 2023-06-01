@@ -6,6 +6,7 @@ from . import views
 from store.views import signup
 from django.contrib.auth import views as auth_views
 from .forms import LoginForm
+from .views import logout_view
 
 
 app_name = 'store'
@@ -25,4 +26,5 @@ urlpatterns = [
     path('base/', views.base, name="base"),
     path('signup/', views.signup, name='signup'),
     path('login/', auth_views.LoginView.as_view(template_name='store/login.html', authentication_form=LoginForm), name='login'),
+    path('logout/', logout_view, name='logout'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
