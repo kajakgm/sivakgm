@@ -11,9 +11,21 @@
                 <div class="col-xxl-6 col-lg-5">
                     <div class="cta-form-wrapper">
                         <form method="get" action="{% url 'item:items' %}">
-                            <input  name="query" type="text" value="{{ query }}" placeholder="Trouver votre animal..">
+                            
+                            <input  name="query" class="form-input" type="text" value="{{ query }}" placeholder="Trouver votre animal..">
+                           
                             <button type="submit" class="main-btn btn-hover">Search</button>
                         </form>
+                        <hr class="my-6">
+                        <p class="font-semibold">Categories</p>
+                        
+                        <ul id="nav" class="navbar-nav ml-auto">
+                            {% for category in categories %} 
+                                <li class="nav-item">
+                                    <a class="page-scroll" href="{% url 'item:items' %}?query={{ query }}&category={{ category.id }}">{{ category.name }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
                     </div>
                 </div>
             {% for item in items %}
@@ -26,7 +38,7 @@
                                 <a href="{% url 'item:detail' item.id %}"><h2>{{ item.name }}</h2></a>
 
                                 <p>Prix: {{ item.price }}</p>
-                                <button onclick="window.location.href = '#';" class="main-btn btn-hover wow fadeInUp" data-wow-delay=".6s">Adopter</button>
+                                <button data-item={{item.id}} data-action="add" class="main-btn btn-hover wow fadeInUp update-cart" data-wow-delay=".6s">Adopter</button>
                             </div>
                         </a>
                     </div>
