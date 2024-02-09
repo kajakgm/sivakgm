@@ -22,4 +22,5 @@ class SignupForm(UserCreationForm):
         'placeholder':"Entrez votre mot de passe"}))
     password2 = forms.CharField(widget=forms.PasswordInput(attrs={
         'placeholder':"Confirmer votre mot de passe"}))
-    
+
+
