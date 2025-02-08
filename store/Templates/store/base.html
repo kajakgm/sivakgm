@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 {% load static %}
 <html class="no-js" lang="fr">
   <head>
@@ -70,14 +70,14 @@ var csrftoken = getToken('csrftoken');
                   <ul id="nav" class="navbar-nav ml-auto">
                     {% if request.user.is_authenticated %}
                     <li class="nav-item">
-                          <a class="page-scroll">Bonjour, {{ user.username }}</a>
+                          <a class="page-scroll">Hello, {{ user.username }}</a>
                     </li>
                     {% endif %}
                     <li class="nav-item">
-                      <a class="page-scroll" href="../">Accueil</a>
+                      <a class="page-scroll" href="../">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="page-scroll" href="../store">Boutique</a>
+                      <a class="page-scroll" href="../store">Shop</a>
                     </li>
                     
                     <li class="nav-item">
@@ -133,7 +133,7 @@ var csrftoken = getToken('csrftoken');
 								<div class="logo">
 									<a href="../"> <img src="{% static '/img/logo/logo.png' %}" alt=""> </a>
 								</div>
-								<p class="desc">Ceci est une version effectuée version effectuér au niveau d'un projet Django encadré par notre école 'EMSI' -Ecole Marocaine des Sciences de l'Ingénieur- Réalisé par Thami El Moumeni & Nawfal Daha</p>
+								<p class="desc">Pet Adoption</p>
 								<ul class="socials">
 									<li>
 										<a href="javascript:void(0)"> <i class="lni lni-facebook-filled"></i> </a>
@@ -152,11 +152,11 @@ var csrftoken = getToken('csrftoken');
 						</div>
 						<div class="col-lg-2 col-md-6">
 							<div class="footer-widget">
-								<h3>Liens Rapides</h3>
+								<h3>"Quick Links."</h3>
 								<ul class="links">
-									<li><a href="../">Accueil</a></li>
+									<li><a href="../">Welcome</a></li>
 									<li><a href="../store">Adopter</a></li>
-									<li><a href="../second_shop">Accessoires et gadgets</a></li>
+									<li><a href="../second_shop">Accessoires and gadgets</a></li>
 									<li><a href="javascript:void(0)">Donations</a></li>
 									<li><a href="../contact">Contact</a></li>
 								</ul>
@@ -171,9 +171,9 @@ var csrftoken = getToken('csrftoken');
 							<div class="footer-widget">
 								<h3>Contact</h3>
 								<ul class="info">
-									<li>+0212625479836</li>
-									<li>hellomail@gmail.com</li>
-									<li>Casablanca, Maroc</li>
+									<li>9876543210</li>
+									<li>sivapriya@gmail.com</li>
+									<li>Tamilnadu</li>
 								</ul>
 							</div>
 						</div>

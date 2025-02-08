@@ -5,22 +5,22 @@ from django.contrib.auth.models import User
 
 class LoginForm(AuthenticationForm):
     username = forms.CharField(widget=forms.TextInput(attrs={
-        'placeholder':"Votre nom d'Utilisateur"}))
+        'placeholder':"Username"}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={
-        'placeholder':"Entrez votre mot de passe"}))
+        'placeholder':"Password"}))
 
 class SignupForm(UserCreationForm):
     class Meta:
         model = User
         fields = ('username','email','password1','password2')
     username = forms.CharField(widget=forms.TextInput(attrs={
-        'placeholder':"Votre nom d'Utilisateur"}))
+        'placeholder':"Enter Username"}))
     email = forms.CharField(widget=forms.EmailInput(attrs={
-        'placeholder':"Votre adresse mail"
+        'placeholder':"Enter email"
     }))
     password1 = forms.CharField(widget=forms.PasswordInput(attrs={
-        'placeholder':"Entrez votre mot de passe"}))
+        'placeholder':"Enter password"}))
     password2 = forms.CharField(widget=forms.PasswordInput(attrs={
-        'placeholder':"Confirmer votre mot de passe"}))
+        'placeholder':"Confirm Password"}))
 
 

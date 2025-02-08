@@ -8,7 +8,7 @@ SignUp
         <div class="row align-items-center">
             <div class="col-xxl-6 col-lg-7">
                 <div class="cta-content">
-                    <h1> <span>Inscrivez-vous</span> afin d'en profiter pleinement de notre expérience</h1>
+                    <h1> <span>Sign up</span> fully enjoy our experience.</h1>
                 </div>
             </div>
 
@@ -17,13 +17,13 @@ SignUp
                     <form method="post" action=".">
                         {% csrf_token %}
                         
-                        <label class="inline-block mb-2">Nom d'utilisateur</label><br>
+                        <label class="inline-block mb-2">User name</label><br>
                         {{ form.username }}
                         <label class="inline-block mb-2">Email</label><br>
                         {{ form.email }}
-                        <label class="inline-block mb-2">Mot de passe</label><br>
+                        <label class="inline-block mb-2">Password</label><br>
                         {{ form.password1 }}
-                        <label class="inline-block mb-2">Confirmer Mot de Passe</label><br>
+                        <label class="inline-block mb-2">Confirm Password</label><br>
                         {{ form.password2 }}
 
                         {% if form.errors or form.non_field_errors %}
@@ -35,7 +35,7 @@ SignUp
                             {{ form.non_field_errors }}
                         </div>
                         {% endif %}
-                        <div class="container"><a href="#"><button type="submit" class="main-btn btn-hover">S'inscrire</button></a></div>
+                        <div class="container"><a href="#"><button type="submit" class="main-btn btn-hover">Register</button></a></div>
                     </form>
                 </div>
             </div>

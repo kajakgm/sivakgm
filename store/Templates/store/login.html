@@ -8,7 +8,7 @@ Login
         <div class="row align-items-center">
             <div class="col-xxl-6 col-lg-7">
                 <div class="cta-content">
-                    <h1> <span>Connexion</span> </h1>
+                    <h1> <span>Login</span> </h1>
                 </div>
             </div>
 
@@ -17,10 +17,10 @@ Login
                     <form method="post" action=".">
                         {% csrf_token %}
                         
-                        <label class="inline-block mb-2">Nom d'utilisateur</label><br>
+                        <label class="inline-block mb-2">Username</label><br>
                         {{ form.username }}
                         
-                        <label class="inline-block mb-2">Mot de passe</label><br>
+                        <label class="inline-block mb-2">Password</label><br>
                         {{ form.password }}
                         
 
@@ -33,7 +33,7 @@ Login
                             {{ form.non_field_errors }}
                         </div>
                         {% endif %}
-                        <div class="container"><a href="#"><button type="submit" class="main-btn btn-hover">Se connecter</button></a></div>
+                        <div class="container"><a href="#"><button type="submit" class="main-btn btn-hover">Log in</button></a></div>
                     </form>
                 </div>
             </div>
