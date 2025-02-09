@@ -52,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'adoption.urls'
@@ -139,4 +140,5 @@ EMAIL_HOST_USER = 'petsum43@gmail.com'
 EMAIL_HOST_PASSWORD = 'Django1234'  
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
-DEFAULT_FROM_EMAIL = 'petsum43@gmail.com'  
+DEFAULT_FROM_EMAIL = 'petsum43@gmail.com'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
