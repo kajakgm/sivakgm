@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-!m&r*9+%#1l2%33lp+964b3%+^+6$@cax^7umtbcol85p@&9z1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sivakgm.onrender.com','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['sivakgm-1.onrender.com','localhost','127.0.0.1']
 
 LOGIN_URL='/login/'
 LOGIN_REDIRECT_URL = '/'
